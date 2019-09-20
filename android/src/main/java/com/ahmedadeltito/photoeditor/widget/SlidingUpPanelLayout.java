@@ -1185,6 +1185,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
     protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
         boolean result;
 
+        // Added here due to: https://github.com/prscX/react-native-photo-editor/issues/44
         int save = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             save = canvas.saveLayer(null, null);
